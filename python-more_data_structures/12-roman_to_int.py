@@ -4,11 +4,10 @@ def roman_to_int(roman_string):
     number = 0
     i = 0
     if not isinstance(roman_string, str):
-        return None
-    
+        return 0
     while (i < len(roman_string)):
-        condi = roman[roman_string[i]] < roman[roman_string[i+1]]
-        if i + 1 < len(roman_string) and condi:
+        if (i + 1 < len(roman_string) and 
+            roman[roman_string[i]] < roman[roman_string[i+1]]):
             number = number + roman[roman_string[i+1]] - roman[roman_string[i]]
             i = i + 2
         else:
