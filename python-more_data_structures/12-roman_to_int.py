@@ -11,9 +11,3 @@ def roman_to_int(roman_string):
             number += roman[roman_string[i]]
             i = i + 1
     return number
-
-
-
-#664 = DCLXIV
-
-print(roman_to_int("DCLXIV"))
