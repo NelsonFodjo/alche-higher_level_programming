@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-
+""" Accessing and updating private attribute"""
 
 
 class square:
     """accessing and updating private attributes"""
 
     def __init__(self, size=0):
-        self.size = size
+        self.__size = size
     
     @size.setter
     def size(self, value):
