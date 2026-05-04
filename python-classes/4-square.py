@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Accessing and updating private attribute"""
+"""Accessing and updating private attribute"""
 
 
 class square:
