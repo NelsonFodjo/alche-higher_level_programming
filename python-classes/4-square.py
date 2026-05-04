@@ -2,7 +2,7 @@
 """Accessing and updating private attribute"""
 
 
-class square:
+class Square:
     """accessing and updating private attributes"""
 
     def __init__(self, size=0):
