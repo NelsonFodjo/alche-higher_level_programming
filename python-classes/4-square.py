@@ -6,11 +6,6 @@ class Square:
     """A class that defines a square with a property getter and setter."""
 
     def __init__(self, size=0):
-        """Initialize a new Square instance.
-
-        Args:
-            size (int): The size of the square. Defaults to 0.
-        """
         self.size = size
 
     @property
@@ -27,4 +22,3 @@ class Square:
 
     def area(self):
         return self.__size ** 2
-    
