@@ -6,7 +6,8 @@ class Square:
     """A class that defines a square with a private size attribute."""
 
     def __init__(self, size=0, position=(0,0)):
-        pass
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -26,8 +27,9 @@ class Square:
     
     @postion.setter
     def position(self, value):
-        if not isinstance(self.__position, tuple) or sum(self.__postion) < 0:
+        if (not isinstance(value, tuple) or len(value) != 2 or not isinstance(value[0], int)or not isinstance(value[1], int) or value[0] < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         return self.__size ** 2
