@@ -25,14 +25,15 @@ class Node:
     
     @next_node.setter
     def next_node(self, value):
-        if not None or not isinstance(value, object):
+        if value is not None or not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
+        self.__next_node = value
 
-class StinglyLinkedList(Node):
+class StinglyLinkedList:
     """The StignlyLinkedList class"""
 
     def __init__(self):
-        self.__data = []
+        self.__head = None
         
     def sorted_insert(self, value):
-        self.__data.append(value).sort()
+
