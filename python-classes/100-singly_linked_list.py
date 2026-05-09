@@ -36,7 +36,7 @@ class Node:
         self.__next_node = value
 
 class StinglyLinkedList:
-    """The StignlyLinkedList class"""
+    """A class that defines a singly linked list."""
 
     def __init__(self):
         self.__head = None
