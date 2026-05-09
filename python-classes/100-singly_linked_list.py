@@ -39,6 +39,7 @@ class StinglyLinkedList:
     """A class that defines a singly linked list."""
 
     def __init__(self):
+        """Initialize a new SinglyLinkedList instance."""
         self.__head = None
 
     def __Str__(self):
