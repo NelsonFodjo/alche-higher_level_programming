@@ -52,6 +52,11 @@ class StinglyLinkedList:
         return result.strip
  
     def sorted_insert(self, value):
+        """Insert a new Node in the correct sorted position.
+
+        Args:
+            value (int): The value to insert.
+        """
         new_node = Node(value)
         if self.__head is None or value < self.__head.data:
             new_node.next_node = self.__head
