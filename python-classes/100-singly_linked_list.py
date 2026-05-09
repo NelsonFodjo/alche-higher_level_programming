@@ -3,7 +3,7 @@
 
 
 class Node:
-    """Class definition of the Node nice."""
+    """A class that defines a node of a singly linked list."""
 
     def __init__(self, data, next_node = None):
         """Innitialize a new Node instance."""
