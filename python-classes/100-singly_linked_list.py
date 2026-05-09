@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class Node of a stingly linked list."""
+"""Module that defines a Node and SinglyLinkedList classes."""
 
 
 class Node:
