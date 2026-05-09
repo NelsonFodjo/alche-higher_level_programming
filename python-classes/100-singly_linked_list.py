@@ -17,20 +17,24 @@ class Node:
     
     @property
     def data(self):
+        """Retrieve the data of the node."""
         return self.__data
     
     @data.setter
     def data(self, value):
+        """Set the data with type validation."""
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
     
     @property
     def next_node(self):
+        """Retrieve the next node."""
         return self.__next_node
     
     @next_node.setter
     def next_node(self, value):
+        """Set the next node with type validation."""
         if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
@@ -69,5 +73,3 @@ class StinglyLinkedList:
             new_node.next_node = current.next_node
             current.next_node = current.next_node
             current.next_node = new_node
-
-
