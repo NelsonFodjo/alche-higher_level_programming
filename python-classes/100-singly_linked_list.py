@@ -43,6 +43,7 @@ class StinglyLinkedList:
         self.__head = None
 
     def __Str__(self):
+        """Print the entire list in stdout."""
         result =""
         current = self.__head
         while current is not None:
