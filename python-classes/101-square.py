@@ -67,6 +67,8 @@ class Square:
         result = ""
         for i in range(self.__position[1]):
             result += "\n"
+            if self.__position[1] == 0:
+                result = ""
         for i in range(self.__size):
             result += " " * self.__position[0] + "#" * self.__size + "\n"
-        return result.strip()
+        return result
