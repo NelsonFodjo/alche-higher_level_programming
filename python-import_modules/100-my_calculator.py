@@ -1,29 +1,29 @@
 #!/usr/bin/python3
 """This module imports functions from calculator_1 and handles basic operations."""
-import sys
-import calculator_1
+from sys import argv, exit
+from calculator_1 import add, sub, mul, div
 
 
 def main():
     """Main function to handle calculator operations."""
-    if len(sys.argv) != 4:
+    if len(argv) != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
+        exit(1)
 
-    a = int(sys.argv[1])
-    operator = sys.argv[2]
-    b = int(sys.argv[3])
+    a = int(argv[1])
+    operator = argv[2]
+    b = int(argv[3])
 
     operators = {
-        '+': calculator_1.add,
-        '-': calculator_1.sub,
-        '*': calculator_1.mul,
-        '/': calculator_1.div,
+        '+': add,
+        '-': sub,
+        '*': mul,
+        '/': div,
     }
 
     if operator not in operators:
         print("Unknown operator. Available operators: +, -, * and /")
-        sys.exit(1)
+        exit(1)
 
     result = operators[operator](a, b)
     print("{} {} {} = {}".format(a, operator, b, result))
