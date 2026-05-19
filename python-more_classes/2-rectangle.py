@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-"""Module that defines a Rectangle class with width and height."""
+"""Module that defines a Rectangle class with area and perimeter methods."""
 
 
 class Rectangle:
-    """Defines a rectangle with private width and height attribute."""
+    """Defines a rectangle with area and perimeter computation."""
 
     def __init__(self, width=0, height=0):
+        """Initialize rectangle with optional width and height."""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Returns the width"""
+        """Retrieve width."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Sets the width with validation."""
+        """Set width with validation."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -37,12 +38,12 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-def area(self):
-    """Return the rectangle's area"""
-    return self.__width * self.__height
+    def area(self):
+        """Return the rectangle area."""
+        return self.__width * self.__height
 
-def perimeter(self):
-    """Returns the rectangle's perimeter"""
-    if self.__width == 0 or self.height == 0:
-        return 0
-    return 2 * (self.__width + self.__height)
+    def perimeter(self):
+        """Return the rectangle perimeter, or 0 if width or height is 0."""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
