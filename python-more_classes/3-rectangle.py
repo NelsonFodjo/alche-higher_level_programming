@@ -56,4 +56,4 @@ class Rectangle:
 
     def __repr__(self):
         """Return official string representation of the rectangle"""
-        return type(Rectangle)
+        return "<3-rectangle.Rectangle object"
