@@ -55,19 +55,6 @@ class Rectangle:
             return 0
         return (self.__width + self.__height) * 2
 
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """returns the biggest rectangle area"""
-        if isinstance(rect_1, Rectangle) is False:
-            raise TypeError('rect_1 must be an instance of Rectangle')
-        if isinstance(rect_2, Rectangle) is False:
-            raise TypeError('rect_2 must be an instance of Rectangle')
-        if rect_1.area() > rect_2.area():
-            return rect_1
-        if rect_1.area() < rect_2.area():
-            return rect_2
-        return rect_1
-
     def __str__(self):
         """method string object"""
         if self.__width == 0 or self.__height == 0:
