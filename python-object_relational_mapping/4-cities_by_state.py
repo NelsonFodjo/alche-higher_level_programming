@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-# Lists all cities of the database hbtn_0e_4_usa, ordered by city id.
-# Usage: ./4-cities_by_state.py <mysql username> \
-#                               <mysql password> \
-#                               <database name>
+"""Lists all cities from the database hbtn_0e_4_usa with their parent state.
+
+Uses an INNER JOIN between cities and states to include the state name
+alongside each city.
+
+Usage: ./4-cities_by_state.py <mysql username> <mysql password> <database name>
+Results are ordered by ascending cities.id.
+"""
 import sys
 import MySQLdb
 

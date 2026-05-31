@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-# Creates the State “California” with the City “San Francisco”
-# from the database hbtn_0e_100_usa.
-# Usage: ./100-relationship_states_cities.py <mysql username> /
-#                                            <mysql password> /
-#                                            <database name>
+“””Creates State 'California' with City 'San Francisco' in hbtn_0e_100_usa.
+
+Uses the SQLAlchemy 'cities' relationship so the City is linked automatically.
+Tables are created if they do not yet exist.
+
+Usage: ./100-relationship_states_cities.py username password database
+“””
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

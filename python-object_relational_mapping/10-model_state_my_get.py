@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-# Lists the State object with the name passed as argument
-# from the database hbtn_0e_6_usa.
-# Usage: ./10-model_state_my_get.py <mysql username> /
-#                                   <mysql password> /
-#                                   <database name>
-#                                   <state name searched>
+"""Prints the id of the State whose name matches the given argument.
+
+Database: hbtn_0e_6_usa. Prints "Not found" when no match exists.
+
+Usage: ./10-model_state_my_get.py <mysql username> <mysql password>
+                                  <database name> <state name searched>
+"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

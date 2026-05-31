@@ -1,8 +1,14 @@
 #!/usr/bin/python3
-# Lists all States and corresponding Cities in the database hbtn_0e_101_usa.
-# Usage: ./101-relationship_states_cities_list.py <mysql username> /
-#                                                 <mysql password> /
-#                                                 <database name>
+"""Lists all States and their Cities from hbtn_0e_101_usa.
+
+Uses the 'cities' relationship attribute on State objects.
+Output: each state on its own line followed by its cities indented by 4 spaces.
+
+Usage: ./101-relationship_states_cities_list.py <mysql username>
+                                                <mysql password>
+                                                <database name>
+Results are sorted by ascending states.id then cities.id.
+"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

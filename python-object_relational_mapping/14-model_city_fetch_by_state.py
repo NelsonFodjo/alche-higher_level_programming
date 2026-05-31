@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-# Lists all City objects from the database hbtn_0e_14_usa.
-# Usage: ./14-model_city_fetch_by_state.py <mysql username> /
-#                                          <mysql password> /
-#                                          <database name>
+"""Lists all City objects from hbtn_0e_14_usa grouped by state.
+
+Output format: <state name>: (<city id>) <city name>
+
+Usage: ./14-model_city_fetch_by_state.py <mysql username> <mysql password>
+                                         <database name>
+Results are sorted by ascending cities.id.
+"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
