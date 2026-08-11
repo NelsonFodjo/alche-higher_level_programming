@@ -1,16 +1,10 @@
 #!/usr/bin/node
-num = parseInt(process.argv[2], 10);
-
-function factorial (num) {
-  if (num == 1) {
-    return num;
-  } else {
-    return num * factorial(num - 1);
+function factorial (n) {
+  if (isNaN(n) || n <= 1) {
+    return 1;
   }
+  return n * factorial(n - 1);
 }
 
-if (isNaN) {
-  console.log('1');
-} else {
-  console.log(factorial(num));
-}
+const num = parseInt(process.argv[2], 10);
+console.log(factorial(num));
